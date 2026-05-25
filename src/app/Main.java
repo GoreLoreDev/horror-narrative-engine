@@ -6,6 +6,7 @@ import model.Story;
 
 import java.util.ArrayList;
 import java.util.List;
+import service.StoryEngine;
 import java.util.Scanner;
 
 public class Main {
@@ -14,7 +15,9 @@ public class Main {
 
         Story story = createStory();
 
-        playStory(story);
+        StoryEngine engine = new StoryEngine();
+
+        engine.playStory(story);
     }
 
 
@@ -101,72 +104,11 @@ public class Main {
         return story;
     }
 
-    public static void displayScene(Scene scene) {
 
-        System.out.println("\nSCENE:");
-
-        System.out.println(scene.getTitle());
-
-        System.out.println(scene.getContent());
-
-        if (scene.getChoices() == null ||
-                scene.getChoices().isEmpty()) {
-
-            System.out.println("\nTHE END");
-
-            return;
-        }
-
-        System.out.println("\nCHOICES:");
-
-        for (int i = 0;
-             i < scene.getChoices().size();
-             i++) {
-
-            Choice choice =
-                    scene.getChoices().get(i);
-
-            System.out.println(
-                    (i + 1) + ". " +
-                            choice.getChoiceText()
-            );
-        }
-    }
-
-    public static void playStory(Story story) {
-        Scanner sc = new Scanner(System.in);
-
-
-        Scene currentScene = story.getStartingScene();
-
-        while (currentScene != null) {
-
-            displayScene(currentScene);
-
-            if (currentScene.getChoices() == null ||
-                    currentScene.getChoices().isEmpty()) {
-
-                break;
-            }
-
-            System.out.println("\nChoose an option:");
-
-            int userChoice = sc.nextInt();
-
-            if (userChoice < 1 ||
-                    userChoice > currentScene.getChoices().size()) {
-
-                System.out.println("Invalid choice.");
-                return;
-            }
-
-            Choice selectedChoice =
-                    currentScene.getChoices().get(userChoice - 1);
-
-            Scene nextScene =
-                    selectedChoice.getNextScene();
-
-            currentScene = nextScene;
-        }
-    }
 }
+
+
+
+
+
+
