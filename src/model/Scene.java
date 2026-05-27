@@ -7,18 +7,20 @@ public class Scene {
     private int id;
     private String title;
     private String content;
+    private SceneType sceneType;
     private Story story;
     private List<Choice> choices;
 
     public Scene() {
     }
 
-    public Scene(int id, String title, String content, List<Choice> choices, Story story) {
+    public Scene(int id, String title, String content, List<Choice> choices, Story story, SceneType sceneType) {
         this.id = id;
         this.title = title;
         this.content = content;
         this.choices = choices;
         this.story=story;
+        this.sceneType = sceneType;
     }
 
     public int getId() {
@@ -69,5 +71,13 @@ public class Scene {
 
     public void setStory(Story story) {
         this.story = story;
+    }
+
+    public SceneType getSceneType() {
+        return sceneType;
+    }
+
+    public void setSceneType(SceneType sceneType) {
+        this.sceneType = sceneType;
     }
 }
