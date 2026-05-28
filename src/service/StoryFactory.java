@@ -3,7 +3,7 @@ package service;
 import model.Choice;
 import model.Scene;
 import model.Story;
-
+import model.SceneType;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,6 +23,8 @@ public class StoryFactory {
                 "You enter a cold abandoned cabin deep in the forest."
         );
 
+        introScene.setSceneType(SceneType.NORMAL);
+
         introScene.setStory(story);
 
         Scene basementScene = new Scene();
@@ -33,6 +35,8 @@ public class StoryFactory {
                 "The basement smells like rotten flesh."
         );
 
+        basementScene.setSceneType(SceneType.DEATH);
+
         basementScene.setStory(story);
 
         Scene escapeScene = new Scene();
@@ -42,6 +46,8 @@ public class StoryFactory {
         escapeScene.setContent(
                 "You sprint back into the forest while something follows you."
         );
+
+        escapeScene.setSceneType(SceneType.ESCAPE);
 
         escapeScene.setStory(story);
 

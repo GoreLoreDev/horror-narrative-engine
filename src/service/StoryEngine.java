@@ -2,6 +2,7 @@ package service;
 
 import model.Choice;
 import model.Scene;
+import model.SceneType;
 import model.Story;
 
 import java.util.Scanner;
@@ -64,6 +65,14 @@ public class StoryEngine {
         System.out.println(scene.getTitle());
 
         System.out.println(scene.getContent());
+
+        if(scene.getSceneType()== SceneType.DEATH){
+            System.out.println("\nYou Died");
+        }
+
+        if(scene.getSceneType()== SceneType.ESCAPE){
+            System.out.println("\nYou Escaped");
+        }
 
         if (scene.getChoices() == null ||
                 scene.getChoices().isEmpty()) {
