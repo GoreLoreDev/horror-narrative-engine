@@ -1,9 +1,6 @@
 package service;
 
-import model.Choice;
-import model.Scene;
-import model.SceneType;
-import model.Story;
+import model.*;
 
 import java.util.Scanner;
 
@@ -13,11 +10,14 @@ public class StoryEngine {
 
         Scanner sc = new Scanner(System.in);
 
+        PlayerState playerState=new PlayerState();
+        playerState.setFearLevel(0);
+
         Scene currentScene = story.getStartingScene();
 
         while (currentScene != null) {
 
-            displayScene(currentScene);
+            displayScene(currentScene, playerState);
 
             if (currentScene.getChoices() == null ||
                     currentScene.getChoices().isEmpty()) {
@@ -58,7 +58,7 @@ public class StoryEngine {
         }
     }
 
-    public void displayScene(Scene scene) {
+    public void displayScene(Scene scene, PlayerState playerState) {
 
         System.out.println("\nSCENE:");
 
@@ -67,7 +67,9 @@ public class StoryEngine {
         System.out.println(scene.getContent());
 
         if(scene.getSceneType()== SceneType.DEATH){
+            playerState.setFearLevel(playerState.getFearLevel()+50);
             System.out.println("\nYou Died");
+            System.out.println("Fear level: " + playerState.getFearLevel());
         }
 
         if(scene.getSceneType()== SceneType.ESCAPE){
