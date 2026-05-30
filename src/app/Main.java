@@ -9,10 +9,12 @@ import java.util.ArrayList;
 import java.util.List;
 import service.StoryEngine;
 import java.util.Scanner;
+import ui.MainWindow;
 
 public class Main {
 
     public static void main(String[] args) {
+        new MainWindow();
 
         StoryFactory factory = new StoryFactory();
 
