@@ -1,0 +1,35 @@
+{
+  "title": "The Cabin in Blackwood Forest",
+
+  "description": "A branching horror story.",
+
+  "startingScene": "intro",
+
+  "scenes": [
+
+    {
+      "id": "intro",
+
+      "title": "Abandoned Cabin",
+
+      "content": "You enter a cold abandoned cabin deep in the forest.",
+
+      "sceneType": "NORMAL",
+
+      "fearEffect": 10
+    },
+
+    {
+      "id": "basement",
+
+      "title": "Dark Basement",
+
+      "content": "The basement smells like rotten flesh.",
+
+      "sceneType": "DEATH",
+
+      "fearEffect": 50
+    }
+
+  ]
+}
