@@ -3,8 +3,10 @@ package app;
 import model.Choice;
 import model.Scene;
 import model.Story;
+import model.ValidationReport;
 import service.JsonLoader;
 import service.StoryFactory;
+import service.StoryValidator;
 
 
 import java.util.ArrayList;
@@ -31,6 +33,15 @@ public class Main {
 
         Story story =
                 loader.loadStory();
+
+        StoryValidator validator =
+                new StoryValidator();
+
+        ValidationReport report =
+                validator.validateStory(
+                        story
+                );
+        System.out.println(report);
 
         StoryEngine engine =
                 new StoryEngine();

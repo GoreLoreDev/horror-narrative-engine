@@ -4,6 +4,8 @@ import model.*;
 import java.util.HashSet;
 import java.util.Set;
 
+
+
 public class StoryValidator {
 
     //using DFS to see which scenes are not connected
@@ -40,7 +42,10 @@ public class StoryValidator {
 
     }
 
-    public void validateStory(Story story) {
+    public ValidationReport validateStory(Story story) {
+        ValidationReport report =
+                new ValidationReport();
+
         Set<String> validSceneIds =
                 new HashSet<>();
 
@@ -62,9 +67,8 @@ public class StoryValidator {
 
                 if (nextScene == null) {
 
-                    System.out.println(
-                            "ERROR: Broken scene reference in scene: "
-                                    + scene.getSceneId()
+                    report.setBrokenLinks(
+                            report.getBrokenLinks() + 1
                     );
                 }
 
@@ -87,13 +91,13 @@ public class StoryValidator {
                     scene.getSceneId()
             )) {
 
-                System.out.println(
-                        "WARNING: Unreachable scene: "
-                                + scene.getSceneId()
+                report.setUnreachableScenes(
+                        report.getUnreachableScenes() + 1
                 );
             }
 
         }
+        return report;
     }
 
 }
