@@ -70,6 +70,11 @@ public class StoryValidator {
                     report.setBrokenLinks(
                             report.getBrokenLinks() + 1
                     );
+
+                    report.getErrors().add(
+                            "Broken scene reference in scene: "
+                                    + scene.getSceneId()
+                    );
                 }
 
             }
@@ -93,6 +98,10 @@ public class StoryValidator {
 
                 report.setUnreachableScenes(
                         report.getUnreachableScenes() + 1
+                );
+                report.getWarnings().add(
+                        "Unreachable scene: "
+                                + scene.getSceneId()
                 );
             }
 

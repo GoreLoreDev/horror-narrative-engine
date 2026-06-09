@@ -1,8 +1,17 @@
 package model;
 
 
+import java.util.List;
+import java.util.ArrayList;
+
 public class ValidationReport {
+
+
     private int brokenLinks;
+
+    private List <String> errors=new ArrayList<>();
+
+    private List<String> warnings=new ArrayList<>();
 
     private int unreachableScenes;
 
@@ -49,6 +58,26 @@ public class ValidationReport {
                 + "Cycles Detected: "
                 + cyclesDetected + "\n"
                 + "Status: "
-                + status;
+                + status
+                + "\n\nErrors:\n"
+                + errors
+                + "\n\nWarnings:\n"
+                + warnings;
+    }
+
+    public List<String> getErrors() {
+        return errors;
+    }
+
+    public void setErrors(List<String> errors) {
+        this.errors = errors;
+    }
+
+    public List<String> getWarnings() {
+        return warnings;
+    }
+
+    public void setWarnings(List<String> warnings) {
+        this.warnings = warnings;
     }
 }
