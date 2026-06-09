@@ -42,6 +42,66 @@ public class StoryValidator {
 
     }
 
+    private void detectCycles(//to detect whether the same scene is active in the current iteration or no
+            Scene scene,
+            Set<String> visited,
+            Set<String> recursionStack,
+            ValidationReport report
+    ) {
+
+        if (scene == null) {
+
+            return;
+        }
+
+        if (recursionStack.contains(
+                scene.getSceneId()
+        )) {
+
+            report.setCyclesDetected(
+                    report.getCyclesDetected() + 1
+            );
+
+            report.getWarnings().add(
+                    "Cycle detected involving scene: "
+                            + scene.getSceneId()
+            ); //using recursion stack, to detect active DFS path RIGHT NOW not labeling it as "visited"(fully explored)
+
+            return;
+        }
+
+        if (visited.contains(
+                scene.getSceneId()
+        )) {
+
+            return;
+        }
+        visited.add(
+                scene.getSceneId()
+        );
+
+        recursionStack.add(
+                scene.getSceneId()
+        );
+
+        for (Choice choice :
+                scene.getChoices()) {
+
+            detectCycles(
+                    choice.getNextScene(),
+                    visited,
+                    recursionStack,
+                    report
+            );
+
+        }
+
+        recursionStack.remove(
+                scene.getSceneId()
+        );//done exploring this DFS branch
+
+    }
+
     public ValidationReport validateStory(Story story) {
         ValidationReport report =
                 new ValidationReport();
