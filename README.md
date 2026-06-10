@@ -256,10 +256,7 @@ Potential future improvements:
 
 ![Screenshot 2026-06-10 200024.png](..%2F..%2FOneDrive%2FPictures%2FScreenshots%2FScreenshot%202026-06-10%20200024.png)
 ![Screenshot 2026-06-10 195953.png](..%2F..%2FOneDrive%2FPictures%2FScreenshots%2FScreenshot%202026-06-10%20195953.png)
-![Screenshot 2026-06-10 200006.png](..%2F..%2FOneDrive%2FPictures%2FScreenshots%2FScreenshot%202026-06-10%20200006.png)(Add screenshots here)
-
----
-
+![Screenshot 2026-06-10 200006.png](..%2F..%2FOneDrive%2FPictures%2FScreenshots%2FScreenshot%202026-06-10%20200006.png)---
 # Author
 
 Anuran Paul
