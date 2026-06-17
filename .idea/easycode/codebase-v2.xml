@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="com.obiscr.chatgpt.settings.EasyCodeState">
-    <option name="projectFiles" value="$PROJECT_DIR$/src/app/Main.java;C:/Users/KIIT/IdeaProjects/AIHorrorStoryStudio/src/model/Charecter.java;C:/Users/KIIT/IdeaProjects/AIHorrorStoryStudio/src/model/Choice.java;C:/Users/KIIT/IdeaProjects/AIHorrorStoryStudio/src/model/PlayerState.java;C:/Users/KIIT/IdeaProjects/AIHorrorStoryStudio/src/model/Prompt.java;C:/Users/KIIT/IdeaProjects/AIHorrorStoryStudio/src/model/Scene.java;C:/Users/KIIT/IdeaProjects/AIHorrorStoryStudio/src/model/SceneType.java;C:/Users/KIIT/IdeaProjects/AIHorrorStoryStudio/src/model/Story.java;C:/Users/KIIT/IdeaProjects/AIHorrorStoryStudio/src/service/StoryEngine.java;C:/Users/KIIT/IdeaProjects/AIHorrorStoryStudio/src/service/StoryFactory.java;C:/Users/KIIT/IdeaProjects/AIHorrorStoryStudio/src/ui/MainWindow.java;C:/Users/KIIT/IdeaProjects/AIHorrorStoryStudio/README.md" />
-  </component>
-</project>
