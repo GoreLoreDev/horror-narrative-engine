@@ -254,9 +254,13 @@ Potential future improvements:
 
 # Screenshots
 
-![Screenshot 2026-06-10 200024.png](..%2F..%2FOneDrive%2FPictures%2FScreenshots%2FScreenshot%202026-06-10%20200024.png)
-![Screenshot 2026-06-10 195953.png](..%2F..%2FOneDrive%2FPictures%2FScreenshots%2FScreenshot%202026-06-10%20195953.png)
-![Screenshot 2026-06-10 200006.png](..%2F..%2FOneDrive%2FPictures%2FScreenshots%2FScreenshot%202026-06-10%20200006.png)---
+<img width="1161" height="872" alt="Screenshot 2026-06-10 182123" src="https://github.com/user-attachments/assets/9e39c45b-97d8-43fd-914d-9eee204d487a" />
+<img width="635" height="359" alt="Screenshot 2026-06-17 122832" src="https://github.com/user-attachments/assets/56a885c1-2864-4c67-813f-8313fad7e099" />
+<img width="275" height="408" alt="Screenshot 2026-06-10 200024" src="https://github.com/user-attachments/assets/9e4cba3a-21f8-4ba8-8e51-caf02ff63fd3" />
+<img width="1162" height="862" alt="Screenshot 2026-06-10 200006" src="https://github.com/user-attachments/assets/df0eecf9-1a00-4ad0-b906-e6b6104071c4" />
+<img width="1168" height="875" alt="Screenshot 2026-06-10 195953" src="https://github.com/user-attachments/assets/0759423a-b270-496c-bc5e-6a066dc46a21" />
+<img width="1168" height="875" alt="Screenshot 2026-06-10 195953" src="https://github.com/user-attachments/assets/9167661d-b78f-47d8-87aa-d1fb97eeab54" />
+
 # Author
 
 Anuran Paul
