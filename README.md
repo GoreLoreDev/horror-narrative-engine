@@ -1,4 +1,4 @@
-# Story Narrative Engine
+# Horror Story Narrative Engine
 
 A Java-based interactive narrative engine that dynamically loads and runs branching horror stories using JSON-driven scene graphs, validation systems, runtime traversal, and persistent save/load functionality.
 
